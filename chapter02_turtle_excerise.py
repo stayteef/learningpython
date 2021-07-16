@@ -2,8 +2,8 @@ import turtle
 
 turtle.speed(3)
 
-#defining draw big star function
-def drawbigstar(length):
+#defining draw star function
+def drawstar(length):
     turtle.begin_fill()
     for side in range(5):
         turtle.forward(length)
@@ -27,7 +27,7 @@ turtle.begin_fill()
 
 #start drawing the flag
 turtle.down()
-for side in range(2):
+for _ in range(2):
     turtle.left(90)
     turtle.forward(200)
 
@@ -48,7 +48,7 @@ turtle.color("yellow", "yellow")
 
 #start drawing the stars
 turtle.down()
-drawbigstar(20)
+drawstar(20)
 
 #moving the pen to start drawing small stars
 turtle.forward(70)
@@ -58,14 +58,35 @@ turtle.setheading(32)
 
 #draw small star
 turtle.down()
-drawbigstar(9)
+drawstar(9)
 
 #2nd small star 
 turtle.setheading(270)
-turtle.forward(42)
-turtle.left(90)
+turtle.forward(16)
+turtle.setheading(0)
+turtle.forward(20)
+turtle.setheading(10)
 
 turtle.down()
-drawbigstar(9)
+drawstar(9)
 
+#3nd small star 
+turtle.setheading(270)
+turtle.forward(30)
+turtle.setheading(0)
+turtle.setheading(10)
+turtle.down()
+drawstar(9)
+
+#third star
+turtle.setheading(270)
+turtle.forward(15)
+turtle.setheading(180)
+turtle.forward(20)
+turtle.setheading(320)
+turtle.down()
+drawstar(9)
+
+turtle.up()
+turtle.forward(400)
 turtle.done()
